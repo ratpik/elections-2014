@@ -1,0 +1,124 @@
+/**
+ * "Google Now" Card from https://gist.github.com/eLindemann/5287591
+ */
+ body {
+ 	background: #e1e1e1;
+ 	min-height: 100%;
+ 	margin: auto;
+ }
+ ul.gNow {
+ 	width: 450px;
+ 	height: 100%;
+ 	//float: left;
+ 	padding: 0;
+ }
+ ul.gNow li {
+ 	width: 430px;
+ 	//float: left;
+ 	list-style: none;
+ 	padding: 10px;
+ }
+ div.card {
+ 	background: #fff;
+ 	width: 400px;
+ 	position: relative;
+ 	padding: 15px;
+ 	box-shadow: 0px 3px rgba( 0, 0, 0, 0.1 );
+ 	font-family: Open Sans; 
+ 	color: #444;
+ 	font-size: 14px;
+ 	-moz-border-radius: 2px;
+ 	-webkit-border-radius: 2px;
+ 	border-radius: 2px;
+ 	margin-bottom: 10px;
+ }
+
+ div.card-small {
+ 	background: #fff;
+ 	width: 98px;
+ 	position: relative;
+ 	padding: 15px;
+ 	box-shadow: 0px 3px rgba( 0, 0, 0, 0.1 );
+ 	font-family: Open Sans;
+ 	color: #444;
+ 	font-size: 14px;
+ 	-moz-border-radius: 2px;
+ 	-webkit-border-radius: 2px;
+ 	border-radius: 2px;
+ 	display: inline-block;
+ 	margin: 4px;
+ }
+
+ div.card p {
+ 	margin: 0 0 15px 0;
+ }
+ div.card p.card-title {
+ 	font-size: 28px;
+ 	text-align: center;
+ }
+
+ div.card-small p.card-title {
+ 	font-size: 28px;
+ 	text-align: center;
+ 	margin: 2px 0px 2px 0px;
+ }
+
+ 
+ div.card img.full {
+ 	width: 430px;
+ 	margin: 0 0 15px -15px;
+ }
+
+ div.card-small img.small {
+ 	width: 50px;
+ 	margin: 0 0 15px -15px;
+ }
+
+ div.card img.half {
+ 	width: 200px;
+ 	height: 220px;
+ 	margin: 0 0 15px -15px;
+ }
+
+ .center-block{
+ 	display: block;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+
+ .seats-inline{
+ 	display: inline;
+ 	float: right;
+ 	margin-right: 48px;
+ 	margin-top: 52px;
+ 	font-size: 64px;
+ }
+
+ .seats-small{
+ 	font-size: 34px;
+ 	text-align: center;
+ }
+
+.seats{
+ 	font-size: 64px;
+ }
+
+ .col{
+  display: inline-block;
+  position: relative;
+  vertical-align: text-top;
+  margin: 10px;
+}
+
+
+#nda-col{
+  background-color: #FF9933;
+}
+
+#upa-col{
+  background-color: #A5F1F9;
+}
+
+#others-col{
+  background-color: #0000FF;
+}

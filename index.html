@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Realtime India Election Results - May 2014 </title>
+<!--
+<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:500,400,300" rel="stylesheet" type="text/css">
+<link href="assets/css/project.css" rel="stylesheet" type="text/css">
+
+<script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+
+<style>
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<div class="center-block" style="text-align:center;">
+
+  <div class="col" id="nda-col">
+    <ul class="gNow center-block">
+      <li>
+      <div class="card">
+        <p class="card-title">BJP</p>
+        <img src="assets/img/bjp.png" class="half" />
+        <div class="seats-inline" id="seats-bjp">-</div>
+
+      </div>
+      <div class="card">
+        <p class="card-title">NDA</p>
+        <div class="seats" id="seats-nda">-</div>
+
+      </div>
+      </li>
+    </ul>
+
+  </div>
+  <div class="col" id="upa-col">
+
+    <ul class="gNow center-block">
+      <li>
+      <div class="card">
+        <p class="card-title">INC</p>
+        <img src="assets/img/inc.png" class="half" />
+        <div class="seats-inline" id="seats-inc">-</div>
+
+      </div>
+      <div class="card">
+        <p class="card-title">UPA</p>
+        <div class="seats" id="seats-upa">-</div>
+
+      </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col" id="others-col">
+
+    <ul class="gNow center-block" >
+      <li>
+
+      <div class="card-small">
+        <p class="card-title">SP</p>
+        <div class="seats-small" id="seats-sp">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">BSP</p>
+        <div class="seats-small" id="seats-bsp">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">AAP</p>
+        <div class="seats-small" id="seats-aap">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">TMC</p>
+        <div class="seats-small" id="seats-tmc">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">BJD</p>
+        <div class="seats-small" id="seats-bjd">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">AIADMK</p>
+        <div class="seats-small" id="seats-aiadmk">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">DMK</p>
+        <div class="seats-small" id="seats-dmk">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">LEFT</p>
+        <div class="seats-small" id="seats-left">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">TRS</p>
+        <div class="seats-small" id="seats-trs">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">YSRC</p>
+        <div class="seats-small" id="seats-ysrc">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">JD (U)</p>
+        <div class="seats-small" id="seats-jdu">-</div>
+
+      </div>
+      <div class="card-small">
+        <p class="card-title">Others</p>
+        <div class="seats-small" id="seats-others">-</div>
+
+      </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<script>
+
+var myDataRef = new Firebase('https://dazzling-fire-5510.firebaseio.com/parties/seats');
+myDataRef.on('value', function(snapshot) {
+    
+    if(snapshot.val() === null) {
+      $('.seats-small').html('-');
+      $('.seats-inline').html('-');
+      $('.seats').html('-');
+    }else {
+    var partySeats = snapshot.val();
+   
+    $.each(partySeats, function(party, seats){
+
+      switch(party){
+      case "bjp": $('#seats-bjp').html(seats); break;  
+      case "inc": $('#seats-inc').html(seats); break;  
+      case "nda": $('#seats-nda').html(seats); break;  
+      case "upa": $('#seats-upa').html(seats); break;  
+      case "sp": $('#seats-sp').html(seats); break;  
+      case "bsp": $('#seats-bsp').html(seats); break;  
+      case "tmc": $('#seats-tmc').html(seats); break;  
+      case "aap": $('#seats-aap').html(seats); break;  
+      case "bjd": $('#seats-bjd').html(seats); break;  
+      case "dmk": $('#seats-dmk').html(seats); break;  
+      case "aiadmk": $('#seats-aiadmk').html(seats); break;  
+      case "left": $('#seats-left').html(seats); break;  
+      case "trs": $('#seats-trs').html(seats); break;  
+      case "ysrc": $('#seats-ysrc').html(seats); break;  
+      case "jdu": $('#seats-jdu').html(seats); break;  
+      case "others": $('#seats-others').html(seats); break;  
+
+      } 
+    });
+
+    }
+});
+
+</script>
+</body>
+
+</html>
