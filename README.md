@@ -5,6 +5,9 @@ An experiment to check out how realtime apps can be built with [Firebase](https:
 
 #####You can view the site here - https://dazzling-fire-5510.firebaseapp.com/
 
+
+![Screenshot with sample results data](https://raw.githubusercontent.com/ratpik/elections-2014/master/screenshot.png "Screenshot with sample data")
+
 ### About the elections
 The 2014 Indian elections are the largest democratic elections to be carried out anywhere over the world. The elctions had 9 phases of voting spanning 40 days. The results for the same will be counted on the 16th of May 2014. I'll be updating results as they would be coming in using the realtime update api.
 
